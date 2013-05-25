@@ -1,0 +1,15 @@
+<h1><%= @article.title %></h1>
+<p><i>by <%= @article.author %></i><p>
+
+<p>Last updated: <%= @article.updated_at %>
+
+<% @sections.each do |section| %>
+	<% if section.fmttype == 'body' %>
+	  <p><%= section.content %></p>
+	<% else %>
+	  <h3><%= section.content %></h3>
+	<% end %>  
+<% end %>
+<hr />
+<p><%= link_to 'Edit', edit_article_path(@article), { :class => "btn btn-warning" } %>
+<p></p>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Articlemaker</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+ <div class="row">
+  <div class="navbar nav navbar-static-top">
+	<div class="navbar-inner">
+	  <a class="brand" href="#">Arrrrrrr-ticleMaker</a>
+	  <ul class="nav">
+	    <li class="divider-vertical"></li>
+	    <li class="divider-vertical"></li>
+		<li><%= link_to 'Home', articles_path %></li>
+	    <li class="divider-vertical"></li>
+		<li><%= link_to 'New Article', new_article_path %></li>
+	  </ul>
+	</div>
+  </div>
+ </div>
+ <div class="container">
+	  <div class="container">
+ 	   <div class="span12">
+		  <div class="well">
+		   <div class="media">
+			<a class="pull-left" href="#">
+			  <img src="/assets/rails.png">
+			</a>		   
+		    <div class="media-body">
+				<h2>Arrrrrrr-ticleMaker</h2>
+				<p>The ultimate new, innovative, crowd-sourced, location-based, pirate social media text editor on the web!</p>
+		    </div>
+		   </div>
+		  </div>
+	   </div>
+	  </div>  
+
+	<div class="row">
+	  <div class="span3">
+		<div class="nav nav-tabs nav-stacked">
+		  <li><a href="#">Article1</a></li>
+		  <li><a href="#">Article2</a></li>
+		  <li><a href="#">Article3</a></li>
+		  <li><a href="#">Article4</a></li>
+		  <li><a href="#">Article5</a></li>
+		</div>
+	  </div>
+	  <div class="span9">
+		<%= yield %>
+	 </div>
+	</div>
+ </div>
+ <div class='container'>
+	<p style='margin-top: 40px; text-align: center;'>&copy; Kevin Browne, 2013. All rights reserved.</p>
+ </div>
+</body>
+</html>
